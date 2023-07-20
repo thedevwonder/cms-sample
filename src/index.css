@@ -60,7 +60,7 @@ textarea {
   width: 200px;
   height: 200px;
 }
-.input {
+input {
   background-color: hsla(0, 100%, 100%, 0.16);
   box-shadow: none;
   border: none;

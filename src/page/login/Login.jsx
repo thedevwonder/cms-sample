@@ -2,6 +2,7 @@ import { onAuthStateChanged, signInAnonymously } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import auth from "../../auth.firebase";
 import { useNavigate } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 const Login = ({ currentUser, setCurrentUser }) => {
   useEffect(() => {
@@ -27,9 +28,13 @@ const Login = ({ currentUser, setCurrentUser }) => {
       });
   };
   return (
-    <>
-      <button onClick={signInUser}>Sign In</button>
-    </>
+    <div style={{margin: "3rem", textAlign:"center"}}>
+        <div>
+        Sign In Anonymously
+        </div>
+    
+      <Button variant="dark" style={{marginTop: "2rem"}} onClick={signInUser}>Sign In</Button>
+    </div>
   );
 };
 
